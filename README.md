@@ -20,3 +20,7 @@ https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html
    https://www.geeksforgeeks.org/modulo-or-remainder-operator-in-java/
 - Advanced number operations, Modulo and Math library
   https://www.w3schools.com/java/java_math.asp
+- String
+  https://www.w3schools.com/java/java_ref_string.asp
+- More string, StringBuilder
+  https://www.javatpoint.com/StringBuilder-class
