@@ -24,3 +24,7 @@ https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html
   https://www.w3schools.com/java/java_ref_string.asp
 - More string, StringBuilder
   https://www.javatpoint.com/StringBuilder-class
+-  Advanced booleans equals, &&, ||
+   https://www.javatpoint.com/logical-operators
+- Advanced booleans equals, &&, ||
+  https://www.w3schools.com/java/java_conditions.asp
