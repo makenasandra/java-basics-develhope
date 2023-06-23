@@ -28,3 +28,13 @@ https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html
    https://www.javatpoint.com/logical-operators
 - Advanced booleans equals, &&, ||
   https://www.w3schools.com/java/java_conditions.asp
+- Switch Statement
+  https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html
+- Arrays, Lists
+  https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html
+- Arrays, Lists
+  https://www.w3schools.com/java/java_arraylist.asp
+- For loops, for each, for i
+  https://www.javatpoint.com/java-for-loop
+- While loop, do while loop
+  https://www.w3schools.com/java/java_while_loop.asp
