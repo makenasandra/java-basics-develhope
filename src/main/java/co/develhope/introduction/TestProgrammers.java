@@ -26,21 +26,15 @@ class Programmer{
     int age;
     boolean wearsGlasses;
 
-    public Programmer(){
-        this.name = name;
-        this.age = age;
-        this.wearsGlasses = wearsGlasses;
-    }
-
     public void drinkCoffee(){
         System.out.println("Espresso is the secret!");
     }
 
     public void printDetails(){
-        System.out.printf("%s is a %d Here-yo programmer %n", this.name, this.age);
+        System.out.printf("%s is a %d Here-yo programmer %n", name, age);
     }
 
     public void hasGlasses (){
-        System.out.println("Is " + this.name + " wearing glasses? " + this.wearsGlasses);
+        System.out.println("Is " + name + " wearing glasses? " + wearsGlasses);
     }
 }
