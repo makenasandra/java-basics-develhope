@@ -17,7 +17,11 @@ public class DateTime {
         long daysLeft = ChronoUnit.DAYS.between(today, endOfYear);
         System.out.println("Number of days left till the end of the month = " +  daysLeft);
 
-
+        // OR
+        int daysOfTheMonthLeft = today.lengthOfMonth() - today.getDayOfMonth();
+        int daysOfTheYearLeft = today.lengthOfYear() - today.getDayOfYear();
+        System.out.println("Number of days left till the end of the month = " + daysOfTheMonthLeft);
+        System.out.println("Number of days left till the end of the month = " +  daysOfTheYearLeft);
 
     }
 }
