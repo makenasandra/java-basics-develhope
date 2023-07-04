@@ -5,7 +5,7 @@ package co.develhope.introduction.Javadoc;
  * 1. addHelloWord method
  * 2. getFullName method
  *
- * Author: MK
+ * @Author: MK
  */
 public class WordGames {
 
