@@ -1,5 +1,17 @@
 package co.develhope.introduction;
 
+/**
+ * Exercise: Map
+ * Define a testing class with a main() method where you:
+ *
+ * create an HashMap that maps the numbers from 1 to 5 with their respective English names
+ * create an HashMap that maps the odd number from 1 to 9 with their respective Italian names
+ * merge (without using merge()) the second hashmap into the first one (duplicate keys' values are overwritten in the first HashMap)
+ * print the modified firstHashMap
+ * print on screen the value of the keys 5, 6, 7, 8 and 9
+ * if there's no mapping for a specific key, print No associated value
+ */
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -20,7 +32,7 @@ public class Maps {
         numbers.put(5, "cinque");
 
         numbers.putAll(oddNumbers);
-        
+
         for (int i = 5; i <= 9; i++) {
             if(numbers.get(i)==null){
                 System.out.println("No associated value");
