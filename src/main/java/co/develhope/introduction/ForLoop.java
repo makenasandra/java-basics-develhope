@@ -1,5 +1,9 @@
 package co.develhope.introduction;
 
+/**
+ * For Loop
+ * Use a for-loop to print all the number from 5 to 25 (including the upper and lower bound)
+ */
 public class ForLoop {
 
     public static void main(String[] args)

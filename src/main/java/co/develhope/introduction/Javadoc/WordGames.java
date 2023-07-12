@@ -26,5 +26,6 @@ public class WordGames {
      */
     public String getFullName(String name, String surname){
         return name + " " + surname;
+
     }
 }

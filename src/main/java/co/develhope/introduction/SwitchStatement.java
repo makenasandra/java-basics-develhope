@@ -1,5 +1,12 @@
 package co.develhope.introduction;
 
+/**
+ * Switch Statement
+ * Loop infinite times asking the user to input a number between 1 and 10
+ * Print the name of the number (e.g. 5 --> five)
+ * If the user input a number lower than 1 or greater than 10, print Cannot give you the name
+ */
+
 import java.util.Scanner;
 public class SwitchStatement {
     public static void main(String[] args) {

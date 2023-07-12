@@ -1,6 +1,12 @@
 package co.develhope.introduction;
 
-import java.time.Year;
+/**
+ * Date Time
+ * Using LocaleDate or another Date class calculate and print:
+ * How many days are left till the end of the month
+ * How many days are left till the end of the year, using the length() method from java.time.Year.of()
+ */
+
 import  java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 public class DateTime {

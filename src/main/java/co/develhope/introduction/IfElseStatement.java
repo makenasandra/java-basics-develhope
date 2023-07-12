@@ -1,6 +1,11 @@
 package co.develhope.introduction;
 
-public class JavaConditions {
+/**
+ * If/else Statement
+ * Define a variable called myName and assign your name to it
+ * Using the if-else statement, print if the number of letters in your name is even or odd
+ */
+public class IfElseStatement {
     public static void main(String[] args) {
         String myName = "Gingery";
 

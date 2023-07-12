@@ -54,4 +54,21 @@ https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html
   https://www.programiz.com/java-programming/constructors
 - Encapsulation
   https://stackify.com/oop-concept-for-beginners-what-is-encapsulation/
+- Sets
+  https://www.geeksforgeeks.org/set-in-java/
+- Maps
+  https://www.w3schools.com/java/java_hashmap.asp
+- Maps
+  https://www.geeksforgeeks.org/map-interface-java-examples/
+- Collection
+  https://www.javatpoint.com/collections-in-java
+- Reading and Writing a File
+  https://jsparrow.github.io/rules/use-files-write-string.html#description
+- Handling Exceptions, try catch
+  https://www.programiz.com/java-programming/try-catch
+- Enums
+  https://www.geeksforgeeks.org/enum-in-java/
+- JUnit
+  https://www.javatpoint.com/junit-tutorial
+
   
