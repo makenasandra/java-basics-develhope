@@ -8,8 +8,14 @@ class CalculatorTest {
     // this tests addition method
     @Test
     void testSubtraction(){
-        assertEquals(34, Calculator.subtraction(100, 66));
-        assertEquals(34, Calculator.subtraction(500, 66));
+
+        assertAll( "Addition results",
+                () -> {
+            assertEquals(34, Calculator.subtraction(100, 66));
+            assertEquals(34, Calculator.subtraction(500, 66));
+
+        });
+
     }
     @Test
     void testMultiplication(){
