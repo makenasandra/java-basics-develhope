@@ -70,5 +70,11 @@ https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html
   https://www.geeksforgeeks.org/enum-in-java/
 - JUnit
   https://www.javatpoint.com/junit-tutorial
+- Inheritance
+  https://www.geeksforgeeks.org/inheritance-in-java/
+- Abstract classes, interfaces
+  https://www.geeksforgeeks.org/abstract-classes-in-java/
+- Overriding
+  https://www.geeksforgeeks.org/overriding-in-java/
 
   
