@@ -76,6 +76,15 @@ https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html
   https://www.geeksforgeeks.org/abstract-classes-in-java/
 - Overriding
   https://www.geeksforgeeks.org/overriding-in-java/
-- 
+- Additional Resource - Maven
+  https://www.javatpoint.com/maven-tutorial
+- Records
+  https://www.geeksforgeeks.org/what-are-java-records-and-how-to-use-them-alongside-constructors-and-methods/
+- Ternary Operator
+  https://www.geeksforgeeks.org/java-ternary-operator-with-examples/
+- BigInteger
+  https://www.geeksforgeeks.org/biginteger-class-in-java/
+- Streams
+  https://docs.oracle.com/javase/tutorial/collections/streams/index.html
 
   
