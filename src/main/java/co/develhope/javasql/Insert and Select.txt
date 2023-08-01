@@ -1,0 +1,35 @@
+Insert and Select
+1. Write insert statements to insert the following 5 ingredients:
+Eggs
+Bread
+Beef Patty
+Lettuce
+Yoghurt
+
+INSERT INTO INGREDIENT (NAME, CONTAINS_LACTOSE, VEGETARIAN, VEGAN, GLUTEN_FREE)
+VALUES ('Eggs', false, true, false, true);
+
+INSERT INTO INGREDIENT (NAME, CONTAINS_LACTOSE, VEGETARIAN, VEGAN, GLUTEN_FREE)
+VALUES ('Bread', false, true, true, false);
+
+INSERT INTO INGREDIENT (NAME, CONTAINS_LACTOSE, VEGETARIAN, VEGAN, GLUTEN_FREE)
+VALUES ('Beef Patty', false, false, false, true);
+
+INSERT INTO INGREDIENT (NAME, CONTAINS_LACTOSE, VEGETARIAN, VEGAN, GLUTEN_FREE)
+VALUES ('Lettuce', false, true, true, true);
+
+INSERT INTO INGREDIENT (NAME, CONTAINS_LACTOSE, VEGETARIAN, VEGAN, GLUTEN_FREE)
+VALUES ('Yoghurt', true, true, false, true);
+
+2. Write a SELECT statement to select the NAME of all the ingredients.
+SELECT NAME FROM INGREDIENTS;
+
+3. Write a SELECT statement to select the NAME and the PRICE of the ingredients
+SELECT NAME FROM INGREDIENT;
+Price value is not available in the INGREDIENT table
+
+4. Write a SELECT statement to select all columns of ingredients, ordered by NAME
+SELECT * FROM INGREDIENT ORDER BY NAME;
+
+5. Write a SELECT statement to select all columns of ingredients, ordered by "GLUTEN_FREE" with the "true" items on top
+SELECT * FROM INGREDIENT ORDER BY GLUTEN_FREE DESC;

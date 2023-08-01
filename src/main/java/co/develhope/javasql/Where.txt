@@ -1,0 +1,31 @@
+Where
+
+Using a SELECT statement with a WHERE clause, retrieve all meals that have a price less than €15
+SELECT * FROM MEAL WHERE PRICE < 15.00;
+
+Using a SELECT statement with a WHERE clause, retrieve all ingredients that are vegetarian.
+SELECT * FROM INGREDIENTS WHERE VEGETARIAN;
+
+Using a SELECT statement with a WHERE clause, retrieve all meals that have more than 500 calories.
+SELECT * FROM MEAL WHERE CALORIES>500;
+
+Using a SELECT statement with a WHERE clause, retrieve all meals that have a price between €15 and €16.
+SELECT * FROM MEAL WHERE PRICE BETWEEN 15 AND 16;
+
+Using a SELECT statement with a WHERE clause, retrieve all ingredients that are both lactose-free (note lactose FREE) and gluten-free.
+SELECT * FROM INGREDIENTS WHERE !CONTAINS_LACTOSE AND GLUTEN_FREE;
+
+Using a SELECT statement with a WHERE clause and logical operator(s), retrieve all meals that have a price less than €15 or more than 600 calories.
+SELECT * FROM MEAL WHERE PRICE < 15.00 OR CALORIES>600;
+
+Using a SELECT statement with a WHERE clause, retrieve all ingredients that are vegan or gluten-free
+SELECT * FROM INGREDIENTS WHERE VEGAN OR GLUTEN_FREE;
+
+Using a SELECT statement with a WHERE clause, retrieve all meals with the name 'Pesto Pasta'
+SELECT * FROM MEAL WHERE NAME = "Pesto Pasta";
+
+Using a SELECT statement with a WHERE clause, retrieve all ingredients that are not lactose-free
+SELECT * FROM INGREDIENTS WHERE CONTAINS_LACTOSE;
+
+Using a SELECT statement with a WHERE clause and a logical operator, retrieve all meals that have a price more than €20 and less than 800 calories.
+SELECT * FROM MEAL WHERE PRICE > 20 AND CALORIES<800;

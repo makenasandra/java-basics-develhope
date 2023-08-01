@@ -29,4 +29,5 @@ public class Arrays {
         System.out.println("First 6 Prime Numbers:" + java.util.Arrays.toString(primeNumbers));
 
     }
+
 }
