@@ -1,0 +1,149 @@
+Date, Timestamp, Select Functions
+Use all the functions below, find out what they do, write a description for them here or in the comments of the code. Add a meaningful column alias
+
+CONCAT(COLUMN1, COLUMN2) AS ALIAS_NAME
+ LOWER(COLUMN)
+ UPPER(COLUMN)
+ TRIM(COLUMN)
+ LENGTH(COLUMN)
+ SUBSTRING(COLUMN, START, LENGTH)
+ ROUND(COLUMN, DECIMAL_PLACES)
+ DATE_ADD(COLUMN, INTERVAL EXPRESSION UNIT)
+ DATE_SUB(COLUMN, INTERVAL EXPRESSION UNIT)
+ FORMAT(COLUMN, FORMAT_STRING)
+Using DATE_ADD or DATE_SUB and the following SQL
+
+SELECT NOW();
+
+SOLUTION:
+
+CREATE TABLE MEAL (
+  NAME VARCHAR(255),
+  PRICE DOUBLE,
+  CALORIES INT
+);
+
+CREATE TABLE INGREDIENT (
+  NAME VARCHAR(255),
+  CONTAINS_LACTOSE BOOLEAN,
+  VEGETARIAN BOOLEAN,
+  VEGAN BOOLEAN,
+  GLUTEN_FREE BOOLEAN
+);
+
+INSERT INTO INGREDIENT (NAME, CONTAINS_LACTOSE, VEGETARIAN, VEGAN, GLUTEN_FREE)
+VALUES ('Eggs', false, true, false, true);
+
+INSERT INTO INGREDIENT (NAME, CONTAINS_LACTOSE, VEGETARIAN, VEGAN, GLUTEN_FREE)
+VALUES ('Bread', false, true, true, false);
+
+INSERT INTO INGREDIENT (NAME, CONTAINS_LACTOSE, VEGETARIAN, VEGAN, GLUTEN_FREE)
+VALUES ('Beef Patty', false, false, false, true);
+
+INSERT INTO INGREDIENT (NAME, CONTAINS_LACTOSE, VEGETARIAN, VEGAN, GLUTEN_FREE)
+VALUES ('Lettuce', false, true, true, true);
+
+INSERT INTO INGREDIENT (NAME, CONTAINS_LACTOSE, VEGETARIAN, VEGAN, GLUTEN_FREE)
+VALUES ('Yoghurt', true, true, false, true);
+
+INSERT INTO MEAL(NAME, PRICE, CALORIES)
+VALUES ('Spaghetti Bolognese', 12.99, 600),
+('Grilled Chicken Sandwich', 8.99, 400),
+('Pesto Pasta', 10.99, 550),
+('Steak and Mash', 19.99, 800),
+('Sushi Platter', 15.99, 700);
+
+CREATE TABLE MEAL_ORDER (
+  TIME_MEAL_ORDERED TIMESTAMP DEFAULT NOW(),
+  MEAL_NAME VARCHAR(255)
+);
+
+    INSERT INTO MEAL_ORDER (TIME_MEAL_ORDERED, MEAL_NAME)
+    VALUES (NOW(), 'Spaghetti Bolognese');
+
+    INSERT INTO MEAL_ORDER (TIME_MEAL_ORDERED, MEAL_NAME)
+    VALUES (DATE_ADD(NOW(), INTERVAL 1 HOUR), 'Grilled Chicken Sandwich');
+
+    INSERT INTO MEAL_ORDER (TIME_MEAL_ORDERED, MEAL_NAME)
+    VALUES (DATE_ADD(NOW(), INTERVAL 2 HOUR), 'Pesto Pasta');
+
+    INSERT INTO MEAL_ORDER (TIME_MEAL_ORDERED, MEAL_NAME)
+    VALUES (DATE_ADD(NOW(), INTERVAL 3 HOUR), 'Pesto Pasta');
+
+    INSERT INTO MEAL_ORDER (TIME_MEAL_ORDERED, MEAL_NAME)
+    VALUES (DATE_ADD(NOW(), INTERVAL 4 HOUR), 'Grilled Chicken Sandwich');
+
+    INSERT INTO MEAL_ORDER (TIME_MEAL_ORDERED, MEAL_NAME)
+    VALUES (DATE_ADD(NOW(), INTERVAL 5 HOUR), 'Pesto Pasta');
+
+    INSERT INTO MEAL_ORDER (TIME_MEAL_ORDERED, MEAL_NAME)
+    VALUES (DATE_ADD(NOW(), INTERVAL 6 HOUR), 'Spaghetti Bolognese');
+
+    INSERT INTO MEAL_ORDER (TIME_MEAL_ORDERED, MEAL_NAME)
+    VALUES (DATE_ADD(NOW(), INTERVAL 7 HOUR), 'Pesta Pasta');
+
+    INSERT INTO MEAL_ORDER (TIME_MEAL_ORDERED, MEAL_NAME)
+    VALUES (DATE_ADD(NOW(), INTERVAL 8 HOUR), 'Pesto Pasta');
+
+    INSERT INTO MEAL_ORDER (TIME_MEAL_ORDERED, MEAL_NAME)
+    VALUES (DATE_ADD(NOW(), INTERVAL 9 HOUR), 'Spaghetti Bolognese');
+
+CREATE VIEW MEAL_ORDER_WITH_DETAILS AS
+    SELECT MO.*, M.PRICE, M.CALORIES FROM MEAL_ORDER MO, MEAL M
+    WHERE MO.MEAL_NAME = M.NAME;
+
+
+1. SELECT CONCAT(MEAL_NAME, '= ', CALORIES) AS MEAL_CALORIES
+FROM MEAL_ORDER_WITH_DETAILS;
+CONCAT() is used to combine the values of two columns into one column
+
+2. LOWER(COLUMN)
+select LOWER(MEAL_NAME) as UPPER_MEAL_NAME from MEAL_ORDER_WITH_DETAILS;
+It is used to convert the column values into lowercase
+
+3.  UPPER(COLUMN)
+select UPPER(MEAL_NAME) as LOWER_MEAL_NAME from MEAL_ORDER_WITH_DETAILS;
+It is used to convert the column values into upper case
+
+4.TRIM(COLUMN)
+select TRIM(MEAL_NAME) as TRIMMED_NAME from MEAL_ORDER_WITH_DETAILS;
+It is used to remove the leading and trailing white spaces in a string
+
+5. LENGTH(MEAL_NAME)
+select LENGTH(MEAL_NAME) as NAME_LENGTH from MEAL_ORDER_WITH_DETAILS;
+It is used to determine length of string
+
+6. select SUBSTRING(MEAL_NAME, 3, LENGTH(MEAL_NAME)) as NAME_SUBTRING from MEAL_ORDER_WITH_DETAILS;
+It is used to obtain a section of the string according to indices given
+
+7. select ROUND(PRICE, 1) as PRICE_ROUNDED from MEAL_ORDER_WITH_DETAILS;
+It is used to round off number according to the decimal places given
+
+8.  DATE_ADD(COLUMN, INTERVAL EXPRESSION UNIT)
+select DATE_ADD(TIME_MEAL_ORDERED, INTERVAL 10 DAY) as FUTURE_TIME_MEAL_ORDERED from MEAL_ORDER_WITH_DETAILS;
+It is used to obtain date and time in the future from date time given by interval given
+
+9. select DATE_SUB(TIME_MEAL_ORDERED, INTERVAL 10 DAY) as PAST_TIME_MEAL_ORDERED from MEAL_ORDER_WITH_DETAILS;
+It is used to obtain date and time in the past from date time given by interval given
+
+10. FORMAT(COLUMN, FORMAT_STRING)
+select  FORMAT(PRICE, 1) as FORMATTED_MEAL_PRICE from MEAL_ORDER_WITH_DETAILS;
+It is used to round of the given value to number of decimal places given
+
+2. Select your birthday by passing the result into the next item
+
+i.e. DATE_ADD(DATE_ADD(NOW(), INTERVAL 7 DAY), INTERVAL 2 MONTH) as BIRTHDAY_DATE
+
+If you're feeling really adventurous try to get the time to exactly midnight!
+
+SOLUTION:
+
+SELECT DATE_SUB(
+  DATE_ADD(
+    DATE_SUB(
+      DATE_SUB(NOW(), INTERVAL 45 MINUTE),
+      INTERVAL 12 HOUR),
+    INTERVAL 15 DAY),
+  INTERVAL 6 MONTH)
+    as BIRTHDAY_DATE;
+
