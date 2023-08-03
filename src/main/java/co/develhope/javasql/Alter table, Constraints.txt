@@ -1,0 +1,10 @@
+Alter table, Constraints
+Add constraints to every column of the INGREDIENTS table,
+you should use NOT NULL for some columns and unique for other(s)
+
+alter table INGREDIENT
+ADD constraint unique(NAME),
+MODIFY CONTAINS_LACTOSE boolean NOT NULL,
+MODIFY VEGETARIAN boolean NOT NULL,
+MODIFY VEGAN boolean NOT NULL,
+MODIFY GLUTEN_FREE boolean NOT NULL;
