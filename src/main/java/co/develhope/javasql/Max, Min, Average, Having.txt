@@ -1,0 +1,29 @@
+Max, Min, Average, Having
+Write a query to find the maximum price of a meal with more than 500 calories.
+SELECT MEAL_NAME,
+MAX(PRICE) AS MAX_MEAL_PRICE
+FROM MEAL_ORDER_WITH_DETAILS
+WHERE CALORIES > 500
+
+Write a query to find the average calories of meals that cost more than 15 EUR
+SELECT MEAL_NAME,
+AVG(CALORIES) AS AVG_MEAL_CALORIES
+FROM MEAL_ORDER_WITH_DETAILS
+WHERE PRICE > 15
+GROUP BY MEAL_NAME
+
+Write a query to select all meals that have the MAX price, using HAVING and MAX()
+SELECT *
+FROM MEAL_ORDER_WITH_DETAILS
+HAVING PRICE = 19.99;
+
+Write a query to select all meals that have a price lower than the average price, using HAVING and AVG
+SELECT *
+FROM MEAL_ORDER_WITH_DETAILS
+HAVING PRICE < 13.208750000000006;
+
+Write a query to select all meals that have a price lower than the average price and have more than 600 calories
+SELECT *
+FROM MEAL_ORDER_WITH_DETAILS
+WHERE CALORIES > 600
+HAVING PRICE < 13.208750000000006;
