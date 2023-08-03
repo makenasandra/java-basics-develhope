@@ -15,15 +15,15 @@ GROUP BY MEAL_NAME
 Write a query to select all meals that have the MAX price, using HAVING and MAX()
 SELECT *
 FROM MEAL_ORDER_WITH_DETAILS
-HAVING PRICE = 19.99;
+HAVING PRICE = (SELECT MAX(PRICE) FROM MEAL_ORDER_WITH_DETAILS);
 
 Write a query to select all meals that have a price lower than the average price, using HAVING and AVG
 SELECT *
 FROM MEAL_ORDER_WITH_DETAILS
-HAVING PRICE < 13.208750000000006;
+HAVING PRICE < (SELECT AVG(PRICE) FROM MEAL_ORDER_WITH_DETAILS);
 
 Write a query to select all meals that have a price lower than the average price and have more than 600 calories
 SELECT *
 FROM MEAL_ORDER_WITH_DETAILS
-WHERE CALORIES > 600
-HAVING PRICE < 13.208750000000006;
+HAVING PRICE < (SELECT AVG(PRICE) FROM MEAL_ORDER_WITH_DETAILS)
+AND CALORIES > 600;
