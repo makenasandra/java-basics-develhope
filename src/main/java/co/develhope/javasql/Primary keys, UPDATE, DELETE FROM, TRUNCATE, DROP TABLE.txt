@@ -1,0 +1,97 @@
+Create your own customers table, make sure you create it with an auto_increment primary key.
+Insert some customers with an insert statement.
+Edit these customers using the UPDATE statement with a WHERE clause referring to the id.
+Delete some customers with delete from statement with a WHERE clause referring to the id.
+Delete all customers with a truncate statement.
+
+SOLUTION:
+CREATE TABLE DevelhopeCustomers (
+ customer_id INT NOT NULL AUTO_INCREMENT,
+ first_name VARCHAR(255) NOT NULL,
+ last_name VARCHAR(255) NOT NULL,
+ email VARCHAR(255) NOT NULL,
+ PRIMARY KEY (customer_id)
+);
+
+INSERT INTO DevelhopeCustomers (first_name, last_name, email)
+VALUES ('John', 'Doe', 'john@example.com');
+
+INSERT INTO DevelhopeCustomers (first_name, last_name, email)
+VALUES ('Jane', 'Smith', 'jane@example.com');
+
+INSERT INTO DevelhopeCustomers (first_name, last_name, email)
+VALUES ('Michael', 'Johnson', 'michael@example.com');
+
+INSERT INTO DevelhopeCustomers (first_name, last_name, email)
+VALUES ('Emily', 'Williams', 'emily@example.com');
+
+INSERT INTO DevelhopeCustomers (first_name, last_name, email)
+VALUES ('William', 'Brown', 'william@example.com');
+
+INSERT INTO DevelhopeCustomers (first_name, last_name, email)
+VALUES ('Sarah', 'Jones', 'sarah@example.com');
+
+INSERT INTO DevelhopeCustomers (first_name, last_name, email)
+VALUES ('David', 'Miller', 'david@example.com');
+
+INSERT INTO DevelhopeCustomers (first_name, last_name, email)
+VALUES ('Olivia', 'Davis', 'olivia@example.com');
+
+INSERT INTO DevelhopeCustomers (first_name, last_name, email)
+VALUES ('James', 'Martinez', 'james@example.com');
+
+INSERT INTO DevelhopeCustomers (first_name, last_name, email)
+VALUES ('Sophia', 'Garcia', 'sophia@example.com');
+
+select * from DevelhopeCustomers;
+
+update DevelhopeCustomers
+set last_name = "Kimani"
+where customer_id = 8;
+
+delete from DevelhopeCustomers
+where customer_id = 5;
+
+select * from DevelhopeCustomers;
+
+truncate DevelhopeCustomers;
+
+select * from DevelhopeCustomers;
+
+
+Look at the tables below and write which column(s) you think would make a good primary key.
+
+Question
+CREATE TABLE Customers (
+ customer_id INT NOT NULL AUTO_INCREMENT,
+ first_name VARCHAR(255) NOT NULL,
+ last_name VARCHAR(255) NOT NULL,
+ email VARCHAR(255) NOT NULL,
+ PRIMARY KEY (customer_id)
+);
+PRIMARY KEY - customer_id
+
+Question
+CREATE TABLE Products (
+ product_name VARCHAR(255) NOT NULL,
+ product_description VARCHAR(255) NOT NULL,
+ product_price DECIMAL(10, 2) NOT NULL,
+ product_quantity INT NOT NULL
+);
+PRIMARY KEY -  product_name, product_price
+
+Question
+CREATE TABLE Orders (
+ order_id INT NOT NULL AUTO_INCREMENT,
+ customer_id INT NOT NULL,
+ expected_arrival_time DATE
+);
+PRIMARY KEY - order_id
+
+9 - Question
+CREATE TABLE Product_Orders (
+ order_id INT NOT NULL AUTO_INCREMENT,
+ product_name VARCHAR(255) NOT NULL,
+ total_revenue DOUBLE
+);
+PRIMARY KEY - order_id
